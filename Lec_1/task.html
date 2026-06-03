@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        // Q1
+        // let CourseName = "JasvaScript Basics"
+        // function Name() {
+        //     console.log(CourseName)   
+        // }
+        // Name()
+
+        // Q2 
+        // function Hello() {
+        // let code = css 
+        // }
+        // Hello()
+
+        // css is not define 
+
+        // Q3 
+        // let age = 23
+        // if (age <=22) {
+        // }
+        // console.log(age)
+
+        // Q4 
+
+        // let age = 23
+        // if (age <= 22) {
+        // }
+        // console.log(age)
+
+        // var sage = 24
+        // if (age <=22) {
+        // }
+        // console.log(sage)
+
+        // Q5
+        // console.log(no)
+        // var no = 42;                   // undfine
+
+        // Q6
+
+        // console.log(no)
+        // let no = 42;   //  Cannot access 'no' before initialization
+
+        // Q7
+        // site()
+        //  function site() {
+        //     console.log("first")
+        //  }
+
+        // Q8
+        // kite()
+        //  function kite() {
+        //     console.log("first")
+        //  }
+
+        // Q9 
+//         function outer() {
+//             let counter = 0;
+//             function inner() {
+//                 counter++;
+//                 console.log(counter);
+//             }
+//             return inner;
+//         }
+// const increment = outer();
+
+// increment();
+// increment();
+// increment();
+
+// Q10
+function counter() {
+    let count = 5;
+    return {
+        increment (){
+            count++;
+            return count;
+        },
+        decrement(){
+            count--;
+            return count;
+        },
+        getValue(){
+            return count;
+        }
+    };
+}
+
+const counter = counter();
+
+console.log(counter.increment()); 
+console.log(counter.increment()); 
+console.log(counter.decrement()); 
+console.log(counter.getValue());  
+
+console.log(counter.count);
+
+    </script>
+</body>
+
+</html>
