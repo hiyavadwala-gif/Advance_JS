@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        // Q1
+        // let scope = global
+        // console.log(this)
+
+        // Q2 
+        // function xyz() {
+        //     console.log(this)
+        // }
+        // xyz()
+
+        // Q3
+        // "use strict";
+
+        // function xyz() {
+        //     console.log(this)
+        // }
+        // xyz()
+
+        // Q4
+        //    let obj = {
+        //         name:"Ramesh",
+        //         age :95,
+        //         showName() {
+        //             console.log(this.name)
+        //         }
+        //     };
+        //     obj.showName()
+
+        // Q5
+
+        // let obj = {
+        //     name: "Ramesh",
+        //     age: 45,
+        //     course: "BPT",
+        //     showName() {
+        //         console.log(this.name)
+        //     },
+        //      showAge() {
+        //         console.log(this.Age)
+        //     },
+        //      showCourse() {
+        //         console.log(this.course)
+        //     }
+        // };
+        // obj.showName()
+        // obj.showAge()
+        // obj.showCourse()
+
+        // Q6
+
+
+        // let person = {
+        //     name: "Ramesh",
+
+        //     showName() {
+        //         console.log(this.name);
+        //     }
+        // };
+
+        // let newFunction = person.showName;
+        // newFunction();
+
+        // Q7
+        // let person = {
+        //     name: "Ramesh",
+
+        //     showName() {
+        //         console.log(this.name);
+        //     }
+        // };
+
+        // let newFunction = person.showName.bind(person);
+
+        // newFunction();
+
+        // Q8
+        // function greet(city) {
+        //     console.log(this.name+" " + city);
+
+        // }
+        // const user = {
+        //     name : "Ramesh"
+        // }
+        // greet.call(user,"Surat");
+
+        // Q9
+    //  function greet(city) {
+    //         console.log(this.name+" " + city);
+
+    //     }
+    //     const user = {
+    //         name : "Ramesh"
+    //     }
+        // greet.apply(user,["Surat"]);
+        
+        // Q10 
+        let person = {
+            name: "Ramesh",
+
+            showName() {
+                console.log(this.name);
+            }
+        };
+
+        let newFunction = person.showName.bind(person);
+
+        newFunction();
+
+    </script>
+</body>
+
+</html>
