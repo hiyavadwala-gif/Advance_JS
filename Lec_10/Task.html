@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+
+</head>
+
+<body>
+    <!-- <h1 id="heading">Welcome</h1>
+<button id="btn">Click me </button> -->
+    <!-- <script> -->
+    <!-- // Q1 
+        // const heading = document.querySelector("#heading");
+        // const button= document.querySelector("#btn"); -->
+
+    <!-- // button.addEventListener("click",function(){
+        //     heading.textContent = "Hiya Vadwala"
+        // }) -->
+    <!-- </script> -->
+
+    <!-- // Q2  -->
+    <!-- <h1>Background Color</h1> -->
+    <!-- <button id="btn">Change color</button> -->
+
+    <!-- <script>
+    const color= ["lightyellow","lightgreen","lightblue","pink"]
+    let index =0
+    const button =document.querySelector("#btn")
+    button.addEventListener("click", function(){
+        document.body.style.background= color[index];
+         
+        index = (index + 1) % color.length;
+    }) -->
+    <!-- </script> -->
+
+
+    <!-- Q3  -->
+    <!-- <button id="btn">cilck me</button>
+<script>
+document.querySelector("#btn").addEventListener("click", function () {
+    alert("Hello World")
+})
+</script>
+ -->
+    <!-- Q4  -->
+
+    <!-- <h2>Character Counter</h2>
+<textarea  id="myText" row="4" cols="30" placeholder="Type here..."></textarea>
+<br>
+<p id="count">Character:0</p>
+
+<script>
+    const count = document.querySelector("#myText");
+    textarea.addEventListener("keyup", function () {
+            count.textContent = "Charcters:" + textarea.value.length;
+        });
+</script> -->
+
+    <!-- Q5  -->
+    <!-- <h2>Display Input Value</h2>
+  <input type="text" id="myInput" placeholder="Type something...">
+  <p id="output">Output: </p>
+
+  <script>
+    const myInput = document.querySelector("#myInput");
+    const output  = document.querySelector("#output");
+
+    myInput.addEventListener("input", function() {
+      output.textContent = "Output: " + myInput.value;
+    });
+  </script> -->
+
+    <!-- Q6 -->
+    <!-- <p id="para">This is a paragraph.</p>
+  <button id="btn">Hide Paragraph</button>
+
+  <script>
+    const para = document.querySelector("#para");
+    const btn  = document.querySelector("#btn");
+
+    btn.addEventListener("click", function() {
+      if (para.style.display === "none") {
+        para.style.display = "block";
+        btn.textContent = "Hide Paragraph";
+      } else {
+        para.style.display = "none";
+        btn.textContent = "Show Paragraph";
+      }
+    });
+  </script> -->
+
+    <!-- Q7 -->
+    <!-- 
+  <img id="myImg" src="https://picsum.photos/id/10/300/200" alt="Image">
+  <br><br>
+
+  
+  <button id="btn">Switch Image</button>
+
+  <script>
+    const img = document.querySelector("#myImg");
+    const btn = document.querySelector("#btn");
+
+    const img1 = "https://picsum.photos/id/10/300/200";
+    const img2 = "https://picsum.photos/id/20/300/200";
+
+    btn.addEventListener("click", function() {
+      if (img.src.includes("id/10")) {
+        img.src = img2;
+      } else {
+        img.src = img1; 
+      }
+    });
+  </script> -->
+
+    <!-- Q8  -->
+    <!-- <h2>Dynamic Greeting</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name...">
+  <button id="btn">Greet</button>
+  <p id="greeting"></p>
+
+  <script>
+    const nameInput = document.querySelector("#nameInput");
+    const btn       = document.querySelector("#btn");
+    const greeting  = document.querySelector("#greeting");
+
+    btn.addEventListener("click", function() {
+      let name = nameInput.value;
+      greeting.textContent = "Hello " + name + "!";
+    });
+  </script> -->
+
+
+    <!-- Q9 -->
+    <!-- <h2>Simple Counter</h2>
+  <p>Count: <span id="count">0</span></p>
+  <button id="btn">Increment</button>
+
+  <script>
+    const countDisplay = document.querySelector("#count");
+    const btn = document.querySelector("#btn");
+
+    let count = 0;
+    btn.addEventListener("click", function() {
+      count++;
+      countDisplay.textContent = count;
+    });
+  </script> -->
+
+    <!-- Q10  -->
+    <!-- <h2>Counter</h2>
+  <p>Count: <span id="count">0</span></p>
+  <button id="decBtn">Decrement</button>
+  <button id="incBtn">Increment</button>
+
+  <script>
+    const countDisplay = document.querySelector("#count");
+    const incBtn = document.querySelector("#incBtn");
+    const decBtn = document.querySelector("#decBtn");
+
+    let count = 0;
+    incBtn.addEventListener("click", function() {
+      count++;
+      countDisplay.textContent = count;
+    });
+
+    decBtn.addEventListener("click", function() {
+      count--;
+      countDisplay.textContent = count;
+    });
+  </script> -->
+
+
+
+    <!-- Q11 -->
+    <input type="text" id="mytext" placeholder="Enter text">
+    <button id="button">click me </button>
+
+    <div id="container"></div>
+
+    <script>
+        const input = document.querySelector("#myInput");
+        const btn = document.querySelector("btn");
+        const container = document.querySelector("#container");
+
+        button.addEventListener("click", function () {
+            let text = input.value;
+            let para = document.createElement("p");
+            para.textContent = text;
+
+            para.style.color = "blue";
+            para.style.fontSize = "18px";
+            para.style.border = "1px solid gray";
+            para.style.padding = "5px";
+
+            container.appendChild(para);
+
+            input.value = "";
+        });
+
+    </script>
+</body>
+</html>
