@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <script>
+    //    Q1 
+// const myPromise =  new Promise ((resolve,reject) => {
+//     console.log("loading...");
+//     setTimeout(() => {
+//         resolve("Promise Resolved Successfully")
+//     },2000);
+// })
+
+// myPromise.then((message) =>{
+//     console.log(message)
+// });
+
+
+// Q2 
+// const myPromise = new Promise((resolve, reject) => {
+//     console.log("laoding...");
+//     setTimeout(() => {reject("network error")
+// },2000)
+// });
+
+// myPromise
+// .then((message) => {
+//     console.log(message)
+// })
+// .catch((error) => {
+//     console.log(error);
+// });
+
+// Q3 
+
+// const myPromise = new Promise((resolve, reject) => {
+
+//     const random = Math.random();  
+
+//     if (random > 0.5) {
+//         resolve("Success");
+//     } else {
+//         reject("Failed");
+//     }
+// });
+
+// // Handle both outcomes
+// myPromise
+//     .then((message) => {
+//         console.log(message);   
+//     })
+//     .catch((error) => {
+//         console.log(error);    
+//     });
+
+// Q4
+
+// function login(username, password) {
+//     return new Promise((resolve, reject) => {
+//         console.log("Checking Credentials...");
+
+//         setTimeout(() => {
+//             if (username === "admin" && password === "1234") {
+//                 resolve("Login Successful");
+//             } else {
+//                 reject("Login Failed: Invalid Credentials");
+//             }
+//         }, 2000);
+//     });
+// }
+
+// login("admin", "1234")
+//     .then((message) => {
+//         console.log(message); 
+//     })
+//     .catch((error) => {
+//         console.log(error);    
+//     });
+
+// Q5 
+// function loadProduct() {
+//     return new Promise((resolve, reject) => {
+//         console.log("Loading Products...");
+
+//         setTimeout(() => {
+//             const product = {
+//                 name: "Laptop",
+//                 price: 50000
+//             };
+//             resolve(product);
+//         }, 2000);  
+//     });
+// }
+
+// loadProduct()
+//     .then((product) => {
+//         console.log("\nProduct:");
+//         console.log(product.name);
+//         console.log("₹" + product.price);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+
+// Q6
+// function task1() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Task 1 Complete");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+
+// function task2() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Task 2 Complete");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+
+// function task3() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Task 3 Complete");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+
+// task1()
+    // .then(() => task2())
+    // .then(() => task3());
+
+// Q7 
+
+// function registerStudent() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Student Registered");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+// function verifyEmail() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Email Verified");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+
+
+// function generateIDCard() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("ID Card Generated");
+//             resolve();
+//         }, 1000);
+//     });
+// }
+
+
+// registerStudent()
+//     .then(() => verifyEmail())
+//     .then(() => generateIDCard());
+
+// Q8
+
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("Server Unavailable");  
+//         }, 2000);
+//     });
+// }
+
+// fetchData()
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((error) => {
+//         console.log("API Error:");
+//         console.log(error);
+//     });
+
+// Q9 
+
+// function doOperation() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Operation Successful");
+//             // reject("Operation Failed"); 
+//         }, 1000);
+//     });
+// }
+
+
+// doOperation()
+//     .then((message) => {
+//         console.log(message);     
+//     })
+//     .catch((error) => {
+//         console.log(error);        
+//     })
+//     .finally(() => {
+//         console.log("Operation Finished"); 
+//     });
+
+
+// Q10
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((response) => {
+//         return response.json();        
+//     })
+//     .then((users) => {
+//         users.forEach((user) => {
+//             console.log(user.name);    
+//         });
+//     })
+//     .catch((error) => {
+//         console.log("Error:", error);
+//     })
+//     .finally(() => {
+//         console.log("Fetch Complete");
+//     });
+
+
+
+
+    </script>
+</body>
+</html>
