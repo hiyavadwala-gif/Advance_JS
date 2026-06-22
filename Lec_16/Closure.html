@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure_Task</title>
+</head>
+
+<body>
+    <script>
+        // Q1
+        // function outer() {
+        //     let message = "Hello Closure";
+        //     function inner() {
+        //         console.log(message);
+        //     }
+        //     return inner;
+        // }
+        // const myFunction = outer();
+        // myFunction();
+
+// Q2
+// function countryFunc() {
+//   let country = "India";
+
+//   function stateFunc() {
+//     let state = "Gujarat";
+
+//     function cityFunc() {
+//       let city = "Ahmedabad";
+
+//       console.log(country);
+//       console.log(state);
+//       console.log(city);
+//     }
+//     return cityFunc;
+//   }
+//   return stateFunc;
+// }
+// countryFunc()()();
+
+
+// Q3 
+// function createMessage() {
+//   let msg = "Stored in Closure";
+
+//   return function () {
+//     console.log(msg);
+//   };
+// }
+
+// const printMessage = createMessage();
+// printMessage(); 
+
+// Q4
+// function createUser() {
+//   let password = "12345"; 
+
+//   return {
+//     getPassword: function () {
+//       return password;
+//     }
+//   };
+// }
+// const user = createUser();
+// console.log(user.getPassword()); 
+// console.log(user.password); 
+
+// Q5
+// function counter() {
+//   let count = 0; 
+//   return function () {
+//     count++; 
+//     console.log(count);
+//   };
+// }
+
+// const increment = counter();
+
+// increment(); 
+// increment(); 
+// increment(); 
+
+// Q6
+// function advancedCounter() {
+//   let count = 0; 
+//   return {
+//     increment: function () {
+//       count++;
+//       return count;
+//     },
+//     decrement: function () {
+//       count--;
+//       return count;
+//     },
+//     value: function () {
+//       return count;
+//     }
+//   };
+// }
+// const counter = advancedCounter();
+// console.log(counter.increment()); 
+// console.log(counter.increment()); 
+// console.log(counter.decrement()); 
+
+// Q7
+// function createLikes() {
+//   let likes = 0;
+
+//   return function () {
+//     likes++;
+//     console.log("Likes: " + likes);
+//   };
+// }
+// const like = createLikes();
+// like(); 
+// like(); 
+// like(); 
+    
+    // Q8
+//     function createEmployee(name) {
+//   return {
+//     getName: function () {
+//       return name;
+//     }
+//   };
+// }
+
+// const emp1 = createEmployee("mahesh");
+// const emp2 = createEmployee("suresh");
+
+// console.log(emp1.getName()); 
+// console.log(emp2.getName()); 
+    
+    
+    // Q9
+//     function createProduct(productName, price) {
+//   return {
+//     getProduct: function () {
+//       return {
+//         name: productName,
+//         price: price
+//       };
+//     }
+//   };
+// }
+// const product = createProduct("Laptop", 50000);
+// console.log(product.getProduct());
+    
+//  Q10
+// function counter() {
+//   let count = 0;
+
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter1 = counter();
+// const counter2 = counter();
+
+// console.log("counter1 →", counter1()); 
+// console.log("counter1 →", counter1()); 
+// console.log("counter2 →", counter2()); 
+
+// Q12
+// function createCart() {
+//   let items = []; 
+
+//   return {
+//     addItem: function (item) {
+//       items.push(item);
+//       return items;
+//     },
+//     viewItems: function () {
+//       return items;
+//     }
+//   };
+// }
+
+// const cart = createCart();
+
+// cart.addItem("Laptop");
+// cart.addItem("Mouse");
+// cart.addItem("Keyboard");
+
+// console.log(cart.viewItems());
+
+
+// Q13 
+
+//   function trackClicks() {
+    //     let count = 0; // private, lives in the closure
+    
+    //     return function () {
+        //       count++;
+        //       console.log("Clicked: " + count);
+        //     };
+        //   }
+        
+        //   const handleClick = trackClicks();
+        
+        //   document.getElementById("btn").addEventListener("click", handleClick);
+        
+        
+        // Q14
+//         function greet(name) {
+//   setTimeout(function () {
+//     console.log(name);
+//   }, 2000);
+// }
+
+// greet("suresh");
+        
+        // Q15
+//         function createSession() {
+//   let userName = null; 
+
+//   return {
+//     login: function (name) {
+//       userName = name;
+//       console.log("Logged In");
+//     },
+//     logout: function () {
+//       userName = null;
+//       console.log("Logged Out");
+//     },
+//     getUser: function () {
+//       return userName;
+//     }
+//   };
+// }
+
+// const session = createSession();
+
+// session.login("suresh");
+// console.log(session.getUser());
+        
+    //   Q16
+//     function createCachedDouble() {
+//   let cache = {}; 
+
+//   return function (n) {
+//     if (cache[n] !== undefined) {
+//       console.log("Cached");
+//       return cache[n];
+//     }
+
+//     console.log("Calculated");
+//     const result = n * 2;
+//     cache[n] = result;
+//     return result;
+//   };
+// }
+
+// const double = createCachedDouble();
+
+// console.log(double(5));
+// console.log(double(5));   
+        
+        // Q17
+//         function createAPI(baseURL) {
+//   return function (endpoint) {
+//     return baseURL + endpoint;
+//   };
+// }
+
+// const api = createAPI("https://api.com");
+
+// console.log(api("/users"));
+        
+        // Q18
+//         const userModule = (function () {
+//   let userName = "mahesh"; 
+
+//   return {
+//     getUser: function () {
+//       return userName;
+//     },
+//     setUser: function (newName) {
+//       userName = newName;
+//     }
+//   };
+// })();
+
+// console.log(userModule.getUser()); 
+// userModule.setUser("suresh");
+// console.log(userModule.getUser()); 
+        
+        // Q19
+//         const themeManager = (function () {
+//   let theme = "dark"; 
+
+//   return {
+//     setTheme: function (newTheme) {
+//       theme = newTheme;
+//     },
+//     getTheme: function () {
+//       return theme;
+//     }
+//   };
+// })();
+
+// console.log(themeManager.getTheme()); 
+// themeManager.setTheme("light");
+// console.log(themeManager.getTheme()); 
+        
+        
+    //   Q20
+//     function createAuth() {
+//   let email = null;
+//   let password = null;
+//   let isLoggedIn = false; 
+
+//   return {
+//     login: function (userEmail, userPassword) {
+//       email = userEmail;
+//       password = userPassword;
+//       isLoggedIn = true;
+//       console.log("Logged In");
+//     },
+//     logout: function () {
+//       email = null;
+//       password = null;
+//       isLoggedIn = false;
+//       console.log("Logged Out");
+//     },
+//     getStatus: function () {
+//       console.log("Status: " + (isLoggedIn ? "Active" : "Inactive"));
+//     }
+//   };
+// }
+
+// const auth = createAuth();
+
+// auth.login("suresh@example.com", "12345");
+// auth.getStatus();
+// auth.logout();  
+        
+        
+        
+        
+    </script>
+</body>
+</html>
+  <!-- Q13// <button id="btn">Click Me</button> -->
